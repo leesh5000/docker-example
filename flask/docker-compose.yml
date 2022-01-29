@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  flask:
+    image: leesh/flash-redis:practice
+    ports:
+      - "50000:5000"
+    restart: always
+  redis:
+    image: redis

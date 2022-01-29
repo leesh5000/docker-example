@@ -1,0 +1,12 @@
+version: '3' # 이 버전에 따라 지원하는 도커 엔진이 달라짐. 일반적으로는 3
+
+services:
+  nginx: # container_name:
+    build:
+      context: . # build context is directory
+      # dockerfile: # 다른 경로에 있는 dockerfile 사용 가능
+    image: leesh.nginx:01
+    ports:
+      - 8000:80
+    environment: # dockerfile < docker-compose < docker-compose [run/exec] -e {key}={value}
+      - TEST=compose
